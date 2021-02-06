@@ -1,8 +1,6 @@
 import { Transition } from '@headlessui/react'
 import Welcome from "./Welcome";
 
-
-
 export default function AnimatedWelcome() {
     return <Transition
         show={true}
