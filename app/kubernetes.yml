@@ -18,7 +18,7 @@ spec:
         app: "homepage-2021"
     spec:
       containers:
-        - image: domano/homepage-2021
+        - image: domano/homepage-2021:latest
           livenessProbe:
             failureThreshold: 3
             httpGet:

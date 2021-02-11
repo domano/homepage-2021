@@ -3,6 +3,7 @@ import Image from "next/image"
 import Hero from "../components/Hero"
 import {Transition} from "@headlessui/react"
 import Skills from "../components/Skills";
+import Feature from "../components/Feature";
 
 type MenuProps = {
     links: NavLink[]
@@ -13,13 +14,7 @@ type NavLink = {
     name: string
 }
 
-
-
-
-
-
 export default function Home() {
-
     return (
         <div className=" bg-gray-50 overflow-hidden">
             <div className="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
@@ -53,6 +48,7 @@ export default function Home() {
             <div className="relative pt-6 pb-16 sm:pb-24">
                 <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
                     <Hero/>
+                    <Feature/>
                     <Skills/>
                 </main>
             </div>
