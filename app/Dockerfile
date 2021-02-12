@@ -1,19 +1,22 @@
-FROM node
-
-ARG NODE_ENV="production"
-ENV NODE_ENV=${NODE_ENV}
-
-WORKDIR /app
-
-# This docker file will copy code from app directory
-# including the node_modules and .next folder.
+FROM node:current-alpine AS base
+WORKDIR /base
+COPY package*.json ./
+RUN npm install
 COPY . .
 
-EXPOSE 3000
-
-RUN rm -rf node_modules/
-RUN npm install
+FROM base AS build
+ENV NODE_ENV=production
+WORKDIR /build
+COPY --from=base /base ./
 RUN npm run build
 
-# This run the server at default port 3000
-CMD ["npm", "run", "start"]
+FROM node:current-alpine AS production
+ENV NODE_ENV=production
+WORKDIR /app
+COPY --from=build /build/package*.json ./
+COPY --from=build /build/.next ./.next
+COPY --from=build /build/public ./public
+RUN npm install next
+
+EXPOSE 3000
+CMD npm run start
