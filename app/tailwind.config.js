@@ -11,11 +11,16 @@ module.exports = {
         swell: {
           '0%, 100%': { transform: 'scale(1.25)' },
           '50%': { transform: 'scale(1.00)' },
-        }
+        },
+        flicker: {
+          '0%, 100%': { opacity:'0' },
+          '50%': { opacity: '100' },
+        },
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
         swell: 'swell 1s ease-in-out infinite',
+        flicker: 'flicker 1s linear infinite',
       }
     },
   },
