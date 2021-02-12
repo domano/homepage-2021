@@ -29,7 +29,7 @@ export default function Skills() {
         <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
                 <div className="space-y-5 sm:space-y-4">
-                    <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-purple-700">technologie<span className="animate-pulse">_</span></h2>
+                    <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-purple-700">technologie<span className="animate-flicker">_</span></h2>
                     <p className="text-xl text-gray-500">Ich lerne gerne neues, aber habe trotzdem ein paar Technologien
                         die mir besonders viel Spaß machen.</p>
                 </div>
@@ -49,7 +49,7 @@ export default function Skills() {
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
                 <div className="space-y-5 sm:space-y-4">
                     <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-purple-700">übersicht</h2>
-                    <p className="text-xl text-gray-500">Über die Jahre habe ich in verschiedensten Projekten gearbeitet und viele Technologien zu schätzen gelernt.</p>
+                    <p className="text-xl text-gray-500">Über die Jahre habe ich in verschiedensten Projekten gearbeitet und viele Technologien schätzen gelernt.</p>
                 </div>
                 <div className="lg:col-span-2 flex flex-wrap justify-evenly space-x-0.5">
                     {secondarySkills.map(skill => <SkillBadge title={skill.title} accent={skill.accent}/>)}
@@ -73,8 +73,8 @@ const secondarySkills = [
     {title: "Typescript", accent: true},
     {title: "Robot Framework", accent: false},
     {title: "Docker", accent: true},
-    {title: "Google Cloud Platform", accent: true},
-    {title: "Amazon Web Services", accent: true},
+    {title: "GCP", accent: true},
+    {title: "AWS", accent: true},
     {title: "Docker", accent: true},
     {title: "Spock", accent: true},
     {title: "Groovy", accent: true},
