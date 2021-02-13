@@ -4,6 +4,7 @@ import Hero from "../components/Hero"
 import {Transition} from "@headlessui/react"
 import Skills from "../components/Skills";
 import Feature from "../components/Feature";
+import Roles from "../components/Roles";
 
 type MenuProps = {
     links: NavLink[]
@@ -49,6 +50,7 @@ export default function Home() {
                 <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
                     <Hero/>
                     <Feature/>
+                    <Roles/>
                     <Skills/>
                 </main>
             </div>
