@@ -2,8 +2,6 @@ import {Transition} from "@headlessui/react";
 import Image from "next/image";
 import {useEffect, useRef, useState} from "react";
 
-// TODO: onLoad animate-appear for Image
-// TODO: 2- try it with custom animations and a default opacity
 export default function Hero() {
     let [appear, setAppear] = useState(false)
     return <div className="flex flex-col lg:flex-row justify-around text-center">

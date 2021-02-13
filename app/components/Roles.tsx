@@ -14,7 +14,7 @@ export default function Roles() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentHighlight(currentHightlight => currentHightlight === roles.length - 1 ? 0 : currentHightlight + 1)
-        },1000)
+        },1500)
         return () => clearInterval(interval)
     },[])
     return <div className="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">

@@ -66,7 +66,7 @@ const items: Item[] = [
         icon: ConceptIcon(),
     }, {
         title: "Prototyping",
-        text: "Durch früher Verprobung können Risiken und Kostenfallen aufgedekt werden. Mit Pragmatismus kann ich frühzeitig anfassbare Ergebnisse liefern, anstatt über theoretische Anforderungen zu diskutieren",
+        text: "Durch früher Verprobung können Risiken und Kostenfallen aufgedekt werden. Mit Pragmatismus kann ich frühzeitig anfassbare Ergebnisse liefern, anstatt über theoretische Anforderungen zu diskutieren.",
         icon: PrototypeIcon(),
     }, {
         title: "Handwerk",
@@ -82,7 +82,7 @@ const items: Item[] = [
 function FeatureHeader() {
     return <div className="lg:text-center">
         <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Jede Herausforderung ist eine Chance.
+            Idee. Experiment. Software.
         </p>
         <div className="flex flex-col lg:flex-row">
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
