@@ -1,3 +1,5 @@
+import Roles from "./Roles";
+
 function GrowthIcon() {
     return <svg className="h-6 w-6 animate-wiggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -77,30 +79,39 @@ const items: Item[] = [
     },
 ]
 
-export default function Feature(props: {}) {
+function FeatureHeader() {
+    return <div className="lg:text-center">
+        <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            Jede Herausforderung ist eine Chance.
+        </p>
+        <div className="flex flex-col lg:flex-row">
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                Ob es um Technologie, Zusammenarbeit oder Methoden geht - ich bin überzeugt davon, dass
+                Kreativität, Selbstreflektion und ein hoher Qualitätsanspruch notwendig sind um zuverlässig
+                Erfolge zu erzielen.
+            </p>
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                Mit den verschiedenen Projekt-, Rollen- und Technologieerfahrungen die ich gemacht habe, kann ich mich
+                auf jede Situation einstellen.
+            </p>
+        </div>
+    </div>;
+}
+
+function FeatureItems() {
+    return <div className="mt-10">
+        <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+            {items.map(item => <FeatureItem key={item.title} {...item}/>)}
+        </dl>
+    </div>;
+}
+
+export default function Feature() {
     return <div className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="lg:text-center">
-                <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Jede Herausforderung ist eine Chance.
-                </p>
-                <div className="flex flex-col lg:flex-row">
-                    <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                        Ob es um Technologie, Zusammenarbeit oder Methoden geht - ich bin überzeugt davon, dass
-                        Kreativität, Selbstreflektion und ein hoher Qualitätsanspruch notwendig sind um zuverlässig
-                        Erfolge zu erzielen.
-                    </p>
-                    <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                        Mit den verschiedenen Projekt-, Rollen- und Technologieerfahrungen die ich gemacht habe, kann ich mich auf jede Situation einstellen.
-                    </p>
-                </div>
-            </div>
-            <div className="mt-10">
-                <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-
-                    {items.map(item => <FeatureItem {...item} />)}
-                </dl>
-            </div>
+            <FeatureHeader/>
+            <Roles/>
+            <FeatureItems/>
         </div>
     </div>
 

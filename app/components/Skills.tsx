@@ -52,7 +52,7 @@ export default function Skills() {
                     <p className="text-xl text-gray-500">Über die Jahre habe ich in verschiedensten Projekten gearbeitet und viele Technologien schätzen gelernt.</p>
                 </div>
                 <div className="lg:col-span-2 flex flex-wrap justify-evenly space-x-0.5">
-                    {secondarySkills.map(skill => <SkillBadge title={skill.title} accent={skill.accent}/>)}
+                    {secondarySkills.map(skill => <SkillBadge key={skill.title} title={skill.title} accent={skill.accent}/>)}
                 </div>
             </div>
         </div>
@@ -72,7 +72,6 @@ const secondarySkills = [
     {title: "Dart", accent: false},
     {title: "Typescript", accent: true},
     {title: "Robot Framework", accent: false},
-    {title: "Docker", accent: true},
     {title: "GCP", accent: true},
     {title: "AWS", accent: true},
     {title: "Docker", accent: true},

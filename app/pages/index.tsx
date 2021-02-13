@@ -50,7 +50,6 @@ export default function Home() {
                 <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
                     <Hero/>
                     <Feature/>
-                    <Roles/>
                     <Skills/>
                 </main>
             </div>
