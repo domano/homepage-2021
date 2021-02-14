@@ -77,10 +77,18 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  annotations:
+    # add an annotation indicating the issuer to use.
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    traefik.ingress.kubernetes.io/redirect-entry-point: https
   name: homepage-ingress
 spec:
+  tls:
+  - hosts:
+      - gomano.de
+    secretName: homepage-tls
   rules:
-  - host: "nodes.gomano.de"
+  - host: gomano.de
     http:
       paths:
       - pathType: Prefix
@@ -90,3 +98,16 @@ spec:
             name: homepage-2021
             port:
               number: 80
+---
+apiVersion: cert-manager.io/v1beta1
+kind: Certificate
+metadata:
+  name: gomano
+spec:
+  secretName: homepage-tls
+  dnsNames:
+  - nodes.gomano.de
+  - gomano.de
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
