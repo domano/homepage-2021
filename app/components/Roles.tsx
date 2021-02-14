@@ -1,13 +1,5 @@
+import Image from "next/image";
 import {useEffect, useState} from "react";
-
-// @ts-ignore
-import RocketSVG from "../public/undraw/rocket.svg"
-// @ts-ignore
-import ArchitectSVG from "../public/undraw/architect.svg"
-// @ts-ignore
-import DeveloperSVG from "../public/undraw/developer.svg"
-// @ts-ignore
-import ProductOwnerSVG from "../public/undraw/product_owner.svg"
 
 export default function Roles() {
     const [currentHightlight, setCurrentHighlight] = useState(0)
@@ -38,36 +30,36 @@ const roles: Role[] = [
     {
         title:"Consultant",
         content: "In frühen Phasen bei der Ideenfindung unterstützen und mit iterativen Prototypen für alle greifbar machen.",
-        svg: <RocketSVG className="h-48 w-full object-cover"/>
+        img: "/undraw/rocket.png"
     },
     {
         title:"Architekt",
         content: "Den Erfolg für neue Systeme ebnen und bestehende Systeme verbessern. Coaching für Teams und IT-Abteilungen.",
-        svg: <ArchitectSVG className="h-48 w-full object-cover"/>
+        img: "/undraw/architect.png"
     },
     {
         title:"Developer",
         content: "Mit den besten Technologien Plattformen und Produkte bauen. Vom Frontend bis zum Betrieb.",
-        svg: <DeveloperSVG className="h-48 w-full object-cover"/>
+        img: "/undraw/developer.png"
     },
     {
         title:"Product Owner",
         content: "Fachlichkeit und Technik verbinden. Die richtige Priorisierung und Vorgehensweise finden um mit hoher Geschwindigkeit vorranzukommen.",
-        svg: <ProductOwnerSVG className="h-48 w-full object-cover"/>
+        img: "/undraw/product_owner.png"
     },
 ]
 type Role = {
     title: string,
     content: string,
-    svg: JSX.Element
+    img: string
 }
 
 
 
 function RoleCard(role:Role) {
     return <div className="flex flex-col rounded-lg shadow-lg overflow-hidden h-full">
-        <div className="flex-shrink-0">
-            {role.svg}
+        <div className="h-48 w-full relative">
+            <Image alt={role.title} className="object-cover" src={role.img} layout="fill" objectFit="scale-down" />
         </div>
         <div className="flex-1 bg-white p-6 flex flex-col justify-between">
             <div className="flex-1 block mt-2">

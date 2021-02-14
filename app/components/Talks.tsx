@@ -1,16 +1,5 @@
 
-// @ts-ignore
-import KafkaTalkSVG from "../public/talks/kafka_go.svg"
-// @ts-ignore
-import DatabaseSVG from "../public/talks/database_bottleneck.svg"
-// @ts-ignore
-import MicroservicesSVG from "../public/talks/microservices.svg"
-// @ts-ignore
-import ReactiveGoSVG from "../public/talks/reactive_go.svg"
-// @ts-ignore
-import WhyGoSVG from "../public/talks/why_go.svg"
-// @ts-ignore
-import ServerlessGoSVG from "../public/talks/serverless_go.svg"
+import Image from "next/image";
 
 export default function Talks() {
 
@@ -22,9 +11,13 @@ export default function Talks() {
             <p className="mt-4 max-w-3xl text-lg text-purple-200">
                 Mir macht es Spaß meine Erfahrungen zu teilen und darüber zu diskutieren.
             </p>
-            <div className="mt-12 max-w-lg mx-auto grid  lg:grid-cols-2  md:max-w-none">
+            <div className="mt-12 max-w-lg mx-auto grid  lg:grid-cols-2 gap-5 md:max-w-none">
                 {talks.map((talk, i) => {
-                    return <a href={talk.link} key={talk.title} id={talk.title} className="w-full p-6 object-cover transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110 "> {talk.svg}</a>
+                    return <a href={talk.link} key={talk.title} id={talk.title} className=" p-6 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110 ">
+                        <div className="shadow-2xl ">
+                        <Image className="rounded-xl " height={900} width={1600} layout="responsive" objectFit="cover" src={talk.img}/>
+                        </div>
+                    </a>
                 })}
 
             </div>
@@ -37,32 +30,32 @@ export default function Talks() {
 const talks: Talk[] = [
     {
         title:"The state of Kafka and Go",
-        svg: <KafkaTalkSVG className="rounded-xl shadow-2xl "/>,
+        img: "/talks/kafka_go.png",
         link: "https://www.youtube.com/watch?v=tcaPzIXwj8A"
     },
     {
         title:"Why go?",
-        svg: <WhyGoSVG className="rounded-xl shadow-2xl "/>,
+        img: "/talks/why_go.png",
         link: "https://www.youtube.com/watch?v=BRdRm3wwvjs&t=1s"
     },
     {
         title:"Database bottleneck",
-        svg: <DatabaseSVG className="rounded-xl shadow-2xl "/>,
+        img: "/talks/database_bottleneck.png",
         link: "https://www.youtube.com/watch?v=mGv79zsJ1K8"
     },
     {
         title:"Microservice quality",
-        svg: <MicroservicesSVG className="rounded-xl shadow-2xl "/>,
+        img: "/talks/microservices.png",
         link:"https://www.youtube.com/watch?v=jKbIDyxQmOU&t=1s"
     },
     {
         title:"Reactive Go",
-        svg: <ReactiveGoSVG className="rounded-xl shadow-2xl "/>,
+        img: "/talks/reactive_go.png",
         link: "https://www.youtube.com/watch?v=DsQgf6rgS_s"
     },
     {
         title:"Serverless Go",
-        svg: <ServerlessGoSVG className="rounded-xl shadow-2xl "/>,
+        img: "/talks/serverless_go.png",
         link:"https://www.youtube.com/watch?v=g-xWLYgeJ-M"
     },
 
@@ -72,6 +65,6 @@ const talks: Talk[] = [
 
 type Talk = {
     title: string,
-    svg: JSX.Element,
     link: string,
+    img: string,
 }

@@ -1,6 +1,5 @@
-import {Transition} from "@headlessui/react";
 import Image from "next/image";
-import {useEffect, useRef, useState} from "react";
+import {useState} from "react";
 
 export default function Hero() {
     let [appear, setAppear] = useState(false)
@@ -16,7 +15,7 @@ export default function Hero() {
         <div className={"h-56 w-56 md:h-96 md:w-96 relative mx-auto my-10 "}>
             <Image onLoad={() => {
                 setAppear(true)
-            }} src="/me.jpg" layout="fill" objectFit="cover" className={+ appear ? "rounded-full animate-appear":""}/>
+            }} src="/me.jpg" layout="fill" objectFit="cover" className={appear ? "rounded-full animate-appear":""}/>
         </div>
 
 
