@@ -70,7 +70,7 @@ const items: Item[] = [
         icon: PrototypeIcon(),
     }, {
         title: "Handwerk",
-        text: "Damit aus einem Experiment ein erfolgreiches Produkt wird, ist harte Arbeit notwendig. Mit einem hohen Anspruch nutze ich die besten Werkzeuge um zuverlässige Software zu bauen - auch in Randfällen und Lastsituationen.",
+        text: "Damit aus einem Experiment ein erfolgreiches Produkt wird, ist harte Arbeit notwendig. Mit einem hohen Anspruch nutze ich die besten Werkzeuge, um zuverlässige Software zu bauen - auch in Randfällen und Lastsituationen.",
         icon: BuildIcon(),
     }, {
         title: "Wachstum",
@@ -87,11 +87,11 @@ function FeatureHeader() {
         <div className="flex flex-col lg:flex-row">
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
                 Ob es um Technologie, Zusammenarbeit oder Methoden geht - ich bin überzeugt davon, dass
-                Kreativität, Selbstreflektion und ein hoher Qualitätsanspruch notwendig sind um zuverlässig
+                Kreativität, Selbstreflektion und ein hoher Qualitätsanspruch notwendig sind, um zuverlässig
                 Erfolge zu erzielen.
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                Mit den verschiedenen Projekt-, Rollen- und Technologieerfahrungen die ich gemacht habe, kann ich mich
+                Mit den verschiedenen Projekt-, Rollen- und Technologieerfahrungen, die ich gemacht habe, kann ich mich
                 auf jede Situation einstellen.
             </p>
         </div>

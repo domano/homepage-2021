@@ -1,7 +1,6 @@
 import Image from "next/image";
 import withLoadAnimation from "../lib/with_load_animation";
 import {useEffect, useState} from "react";
-import {randomInt} from "crypto";
 
 function SkillItem(prop: { title: string, subtitle: string, imgPath: string, link:string }) {
     const AnimatedImage = withLoadAnimation(Image)
@@ -59,7 +58,7 @@ function MainSkills() {
             <div className="space-y-5 sm:space-y-4">
                 <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-purple-700">technologie<span
                     className="animate-flicker">_</span></h2>
-                <p className="text-xl text-gray-500">Ich lerne gerne neues, aber habe trotzdem ein paar Technologien
+                <p className="text-xl text-gray-500">Ich lerne gerne neues, aber habe trotzdem ein paar Technologien,
                     die mir besonders viel Spaß machen.</p>
             </div>
             <div className="lg:col-span-2">
@@ -78,10 +77,10 @@ function MainSkills() {
 
 export default function Skills() {
 
-    return <div className="bg-white">
+    return <section className="bg-white">
         <MainSkills/>
         <SkillCloud/>
-    </div>
+    </section>
 }
 
 const secondarySkills = [
@@ -113,7 +112,7 @@ const secondarySkills = [
     {title: "Microservices", accent: false},
 ]
 
-function randomNumber(min, max){
+function randomNumber(min: number, max: number){
     const r = Math.random()*(max-min) + min
     return Math.floor(r)
 }

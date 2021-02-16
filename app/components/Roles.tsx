@@ -16,7 +16,7 @@ export default function Roles() {
         <div className="relative max-w-7xl mx-auto">
             <div className="mt-12 max-w-lg mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-4 md:max-w-none">
                 {roles.map((role, i) => {
-                    return <div key={role.title} id={role.title} className={i===currentHightlight?"animate-grow":""}><RoleCard {...role} /></div>
+                    return <div key={role.title} id={role.title} className={i===currentHightlight?"animate-shrink":""}><RoleCard {...role} /></div>
                 })}
 
             </div>
@@ -44,7 +44,7 @@ const roles: Role[] = [
     },
     {
         title:"Product Owner",
-        content: "Fachlichkeit und Technik verbinden. Die richtige Priorisierung und Vorgehensweise finden um mit hoher Geschwindigkeit voranzukommen.",
+        content: "Fachlichkeit und Technik verbinden. Die richtige Priorisierung und Vorgehensweise finden, um mit hoher Geschwindigkeit voranzukommen.",
         img: "/undraw/product_owner.png"
     },
 ]
