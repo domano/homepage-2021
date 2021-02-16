@@ -1,8 +1,9 @@
 import {useState} from "react";
 
+//@ts-ignore
 export default function withLoadAnimation(WrappedComponent) {
     const [loadState, setLoadState] = useState(false);
-    return (props) => {
+    return (props:any) => {
         const className = props.className
         const c =<WrappedComponent
             {...props}
