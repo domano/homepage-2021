@@ -44,7 +44,7 @@ const roles: Role[] = [
     },
     {
         title:"Product Owner",
-        content: "Fachlichkeit und Technik verbinden. Die richtige Priorisierung und Vorgehensweise finden um mit hoher Geschwindigkeit vorranzukommen.",
+        content: "Fachlichkeit und Technik verbinden. Die richtige Priorisierung und Vorgehensweise finden um mit hoher Geschwindigkeit voranzukommen.",
         img: "/undraw/product_owner.png"
     },
 ]

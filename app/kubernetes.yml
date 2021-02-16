@@ -98,6 +98,16 @@ spec:
             name: homepage-2021
             port:
               number: 80
+  - host: www.gomano.de
+    http:
+      paths:
+        - pathType: Prefix
+          path: /
+          backend:
+            service:
+              name: homepage-2021
+              port:
+                number: 80
 ---
 apiVersion: cert-manager.io/v1beta1
 kind: Certificate
@@ -106,8 +116,8 @@ metadata:
 spec:
   secretName: homepage-tls
   dnsNames:
-  - nodes.gomano.de
   - gomano.de
+  - www.gomano.de
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer

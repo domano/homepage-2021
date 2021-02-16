@@ -21,8 +21,8 @@ module.exports = {
           '50%': { opacity: '100' },
         },
         appear: {
-          '0%':{ opacity:'0' , transform: 'opacity(0)' },
-          '50%':{ opacity:'100' ,  transform: 'opacity(100)' }
+          '0%':{ opacity:'0'  },
+          '100%':{ opacity:'100'  }
         }
       },
       animation: {

@@ -62,15 +62,15 @@ type Item = {
 const items: Item[] = [
     {
         title: "Konzeption",
-        text: "Durch meine Architektur-, Technologie- und Organisationserfahrung kann ich frühzeitig Fehler und Aufwände verhindern, indem ich helfe das richtige Vorgehen und die richtige Architektur zu wählen.",
+        text: "Durch meine Architektur-, Technologie- und Organisationserfahrung kann ich frühzeitig Fehler erkennen und Aufwände verhindern, indem ich helfe das richtige Vorgehen und die richtige Architektur zu wählen.",
         icon: ConceptIcon(),
     }, {
         title: "Prototyping",
-        text: "Durch früher Verprobung können Risiken und Kostenfallen aufgedekt werden. Mit Pragmatismus kann ich frühzeitig anfassbare Ergebnisse liefern, anstatt über theoretische Anforderungen zu diskutieren.",
+        text: "Durch frühe Verprobung können Risiken und Kostenfallen aufgedeckt werden. Mit Pragmatismus kann ich frühzeitig anfassbare Ergebnisse liefern, anstatt über theoretische Anforderungen zu diskutieren.",
         icon: PrototypeIcon(),
     }, {
         title: "Handwerk",
-        text: "Damit aus einem einem Experiment ein erfolgreiches Produkt wird, ist harte Arbeit notwendig. Mit einem hohen Anspruch nutze ich die besten Werkzeuge um zuverlässige Software zu bauen - auch in Randfällen und Lastsituationen.",
+        text: "Damit aus einem Experiment ein erfolgreiches Produkt wird, ist harte Arbeit notwendig. Mit einem hohen Anspruch nutze ich die besten Werkzeuge um zuverlässige Software zu bauen - auch in Randfällen und Lastsituationen.",
         icon: BuildIcon(),
     }, {
         title: "Wachstum",

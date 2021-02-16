@@ -1,8 +1,9 @@
 
 import Image from "next/image";
+import withLoadAnimation from "../lib/with_load_animation";
 
 export default function Talks() {
-
+    const AnimatedImage = withLoadAnimation(Image)
     return <div className="bg-purple-600">
         <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
             <h2 className="text-3xl font-extrabold text-white tracking-tight">
@@ -15,7 +16,7 @@ export default function Talks() {
                 {talks.map((talk, i) => {
                     return <a href={talk.link} key={talk.title} id={talk.title} className=" p-6 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110 ">
                         <div className="shadow-2xl ">
-                        <Image className="rounded-xl " height={900} width={1600} layout="responsive" objectFit="cover" src={talk.img}/>
+                        <AnimatedImage className="rounded-xl " height={900} width={1600} layout="responsive" objectFit="cover" src={talk.img}/>
                         </div>
                     </a>
                 })}
